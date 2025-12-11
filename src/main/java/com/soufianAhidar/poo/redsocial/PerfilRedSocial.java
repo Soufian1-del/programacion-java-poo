@@ -1,4 +1,5 @@
 package com.soufianAhidar.poo.redsocial;
+import java.util.ArrayList;
 
 public class PerfilRedSocial {
 	//Atributos
@@ -10,7 +11,7 @@ public class PerfilRedSocial {
 	private int numberOfPublications;
 	private Estado status;
 	private boolean verified;
-	
+	private ArrayList<String> published;	
 	//metodos
 	public void showInfo() {
 		System.out.printf("Your name is %s /n your username is %s /n your bio says '%s' /n you live in %s /n currently,  you have %d followers /n", name, userName, bio, location, followers);
@@ -35,6 +36,15 @@ public class PerfilRedSocial {
 			System.out.println("perfil no activado");
 		}
 	}
+	
+	public void newPost(String postContent) {
+		published.add(postContent);
+	}
+	
+	public void showPost() {
+		published.forEach(n -> System.out.println(n));
+	}
+	 
 	
 	//getters y setters
 	public String getName() {
@@ -84,6 +94,19 @@ public class PerfilRedSocial {
 	}
 	public void setVerified(boolean verified) {
 		this.verified = verified;
+	}
+
+	public ArrayList<String> getPublished() {
+		return published;
+	}
+
+	public void setPublished(ArrayList<String> published) {
+		this.published = published;
+	}
+	
+	public PerfilRedSocial() {
+		this.published= new ArrayList<>();
+
 	}
 	
 }
