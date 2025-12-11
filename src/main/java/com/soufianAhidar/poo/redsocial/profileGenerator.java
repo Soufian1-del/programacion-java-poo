@@ -3,7 +3,7 @@ package com.soufianAhidar.poo.redsocial;
 public class profileGenerator {
 	//metodos
 	
-	public static String createProfileTest(String profileName) {
+	public static PerfilRedSocial createProfileTest(String profileName) {
 		PerfilRedSocial profile = new PerfilRedSocial();
 		profile.setName(profileName);
 		profile.setUserName("User1");
@@ -12,10 +12,10 @@ public class profileGenerator {
 		profile.setFollowers(0);
 		profile.setNumberOfPublications(0);
 		profile.setVerified(false);
-		return profileName;
+		return profile;
 	}
 	
-	public static String generatePost(String profileName2, int amountOfPost) {
+	public static PerfilRedSocial generatePost(String profileName2, int amountOfPost) {
 		PerfilRedSocial profile = new PerfilRedSocial();
 //		profile.setName(profileName);
 //		profile.setUserName("User1");
@@ -28,6 +28,6 @@ public class profileGenerator {
 		for (int i = 0; i < amountOfPost; i++) {
 			profile.newPost("this is a test post");
 		}
-		return profileName2;
+		return profile;
 	}
 }

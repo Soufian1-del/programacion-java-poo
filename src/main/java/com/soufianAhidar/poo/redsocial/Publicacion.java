@@ -15,6 +15,10 @@ public class Publicacion {
 		this.likes = likes;
 	}
 	
+	public Publicacion() {
+		super();
+	}
+
 	//metodos
 	public void mostrar() {
 		System.out.printf("Tu publicacion '%s' con fecha de %d tiene un total de %d me gusta", publicacion, hora, likes);
