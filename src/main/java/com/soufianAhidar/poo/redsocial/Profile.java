@@ -1,17 +1,16 @@
 package com.soufianAhidar.poo.redsocial;
 import java.util.ArrayList;
 
-public class PerfilRedSocial {
+public class Profile {
 	//Atributos
 	private String name;
 	private String userName;
 	private String bio;
 	private String location;
 	private int followers;
-	private int numberOfPublications;
 	private Estado status;
 	private boolean verified;
-	private ArrayList<String> published;	
+	private ArrayList<String> posts;
 	//metodos
 	public void showInfo() {
 		System.out.printf("Your name is %s /n your username is %s /n your bio says '%s' /n you live in %s /n currently,  you have %d followers /n", name, userName, bio, location, followers);
@@ -38,11 +37,11 @@ public class PerfilRedSocial {
 	}
 	
 	public void newPost(String postContent) {
-		published.add(postContent);
+		posts.add(postContent);
 	}
 	
 	public void showPost() {
-		published.forEach(n -> System.out.println(n));
+		posts.forEach(n -> System.out.println(n));
 	}
 	 
 	
@@ -78,10 +77,7 @@ public class PerfilRedSocial {
 		this.followers = followers;
 	}
 	public int getNumberOfPublications() {
-		return numberOfPublications;
-	}
-	public void setNumberOfPublications(int numberOfPublications) {
-		this.numberOfPublications = numberOfPublications;
+		return this.posts.size();
 	}
 	public Estado getStatus() {
 		return status;
@@ -96,16 +92,16 @@ public class PerfilRedSocial {
 		this.verified = verified;
 	}
 
-	public ArrayList<String> getPublished() {
-		return published;
+	public ArrayList<String> getPosts() {
+		return posts;
 	}
 
-	public void setPublished(ArrayList<String> published) {
-		this.published = published;
+	public void setPosts(ArrayList<String> posts) {
+		this.posts = posts;
 	}
 	
-	public PerfilRedSocial() {
-		this.published= new ArrayList<>();
+	public Profile() {
+		this.posts = new ArrayList<>();
 
 	}
 	

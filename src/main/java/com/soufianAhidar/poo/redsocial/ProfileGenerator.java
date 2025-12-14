@@ -1,10 +1,10 @@
 package com.soufianAhidar.poo.redsocial;
 
-public class profileGenerator {
+public class ProfileGenerator {
 	//metodos
 	
-	public static PerfilRedSocial createProfileTest(String profileName) {
-		PerfilRedSocial profile = new PerfilRedSocial();
+	public static Profile createProfileTest(String profileName) {
+		Profile profile = new Profile();
 		profile.setName(profileName);
 		profile.setUserName("User1");
 		profile.setBio("tell us a little about yourself");
@@ -15,8 +15,8 @@ public class profileGenerator {
 		return profile;
 	}
 	
-	public static PerfilRedSocial generatePost(String profileName2, int amountOfPost) {
-		PerfilRedSocial profile = new PerfilRedSocial();
+	public static Profile generatePost(String profileName2, int amountOfPost) {
+		Profile profile = new Profile();
 //		profile.setName(profileName);
 //		profile.setUserName("User1");
 //		profile.setBio("tell us a little about yourself");
