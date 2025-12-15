@@ -23,9 +23,9 @@ public class MainRedSocial {
 		profiles.add(profile3);
 		
 		for (PerfilRedSocial perfilRedSocial : profiles) {
-			profilesAction.showInfo();
+			perfilRedSocial.showInfo();
 			postAction.mostrar();
-		
+			
 
 		}
 		

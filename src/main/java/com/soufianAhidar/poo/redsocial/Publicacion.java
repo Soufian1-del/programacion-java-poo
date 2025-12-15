@@ -21,7 +21,7 @@ public class Publicacion {
 
 	//metodos
 	public void mostrar() {
-		System.out.printf("Tu publicacion '%s' con fecha de %d tiene un total de %d me gusta", publicacion, hora, likes);
+		System.out.printf("Tu publicacion '%s' con fecha de %d tiene un total de %d me gusta %n", publicacion, hora, likes);
 	}
 	public void	darMeGusta() {
 		likes ++;
