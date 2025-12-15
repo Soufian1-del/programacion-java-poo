@@ -1,17 +1,17 @@
 package com.soufianAhidar.poo.redsocial;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Publicacion {
 	//atributos
 	private String publicacion;
-	private LocalTime hora;
+	private LocalDateTime hora;
 	private int likes;
 	
 	//constructor
 	public Publicacion(String publicacion) {
 		super();
 		this.publicacion = publicacion;
-		this.hora =  LocalTime.now();
+		this.hora =  LocalDateTime.now();
 		this.likes = likes;
 	}
 	
@@ -38,10 +38,10 @@ public class Publicacion {
 	public void setPublicacion(String publicacion) {
 		this.publicacion = publicacion;
 	}
-	public LocalTime getHora() {
+	public LocalDateTime getHora() {
 		return hora;
 	}
-	public void setHora(LocalTime hora) {
+	public void setHora(LocalDateTime hora) {
 		this.hora = hora;
 	}
 	public int getLikes() {

@@ -11,10 +11,10 @@ public class PerfilRedSocial {
 	private int numberOfPublications;
 	private Estado status;
 	private boolean verified;
-	private ArrayList<String> published;	
+	private ArrayList<Publicacion> published;	
 	//metodos
 	public void showInfo() {
-		System.out.printf("Your name is %s /n your username is %s /n your bio says '%s' /n you live in %s /n currently,  you have %d followers /n", name, userName, bio, location, followers);
+		System.out.printf("Your name is %s %n your username is %s %n your bio says '%s' %n you live in %s %n currently,  you have %d followers %n", name, userName, bio, location, followers);
 	}
 	
 	public void addFollower(int followerAmountToAdd) {
@@ -38,7 +38,10 @@ public class PerfilRedSocial {
 	}
 	
 	public void newPost(String postContent) {
-		published.add(postContent);
+		Publicacion p = new Publicacion(postContent);
+		this.published.add(p);
+		
+		//published.add(postContent);
 	}
 	
 	public void showPost() {
@@ -96,11 +99,11 @@ public class PerfilRedSocial {
 		this.verified = verified;
 	}
 
-	public ArrayList<String> getPublished() {
+	public ArrayList<Publicacion> getPublished() {
 		return published;
 	}
 
-	public void setPublished(ArrayList<String> published) {
+	public void setPublished(ArrayList<Publicacion> published) {
 		this.published = published;
 	}
 	

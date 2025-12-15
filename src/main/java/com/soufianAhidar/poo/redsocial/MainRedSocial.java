@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class MainRedSocial {
 	public static void main(String[] args) {
-		profileGenerator generator = new profileGenerator();
+//		profileGenerator generator = new profileGenerator();
 		PerfilRedSocial profilesAction = new PerfilRedSocial();
 		Publicacion postAction = new Publicacion();
 		Scanner sc = new Scanner(System.in);
@@ -13,9 +13,9 @@ public class MainRedSocial {
 		String userName2 = sc.nextLine();
 		System.out.print("Lastly, its important to have a private account, please add one last userName: ");
 		String userName3 = sc.nextLine();
-		PerfilRedSocial profile = generator.createProfileTest(userName);
-		PerfilRedSocial profile2 = generator.generatePost(userName2, 3);
-		PerfilRedSocial profile3 = generator.createProfileTest(userName3);
+		PerfilRedSocial profile = profileGenerator.createProfileTest(userName);
+		PerfilRedSocial profile2 = profileGenerator.generatePost(userName2, 3);
+		PerfilRedSocial profile3 = profileGenerator.createProfileTest(userName3);
 		
 		ArrayList<PerfilRedSocial> profiles = new ArrayList<>();
 		profiles.add(profile);
