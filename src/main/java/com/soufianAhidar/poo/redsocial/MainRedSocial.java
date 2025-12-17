@@ -5,7 +5,7 @@ public class MainRedSocial {
 	public static void main(String[] args) {
 //		profileGenerator generator = new profileGenerator();
 		PerfilRedSocial profilesAction = new PerfilRedSocial();
-		Publicacion postAction = new Publicacion();
+		//Publicacion postAction = new Publicacion();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Welcome to DAM1´s social site! please, write your username: ");
 		String userName = sc.nextLine();
@@ -22,12 +22,14 @@ public class MainRedSocial {
 		profiles.add(profile2);
 		profiles.add(profile3);
 		
+		
 		for (PerfilRedSocial perfilRedSocial : profiles) {
 			perfilRedSocial.showInfo();
-			postAction.mostrar();
+			perfilRedSocial.getPublished().stream().forEach(p->p.mostrar());
 			
 
 		}
+		
 		
 		profiles.get(0).addFollower(6);
 		profiles.get(0).newPost("Just went out to eat in this new restaurant, I hope is worth the money");
